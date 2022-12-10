@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desaparecidos</title>
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="../../public/styles/landing-page.css">
+
+
+</head>
+
+<body>
+
+    <!--INICIO DO HEADER-->
+    <header class="header">
+        <img clas="img_logo" src="../../public/images/Logo.png" alt="Logo">
+        <div class="header_menu">
+            <div class="header_help">
+                <a href="/search-person">Ajude-nos a encontrar </a>
+                <img class="header_vector" src="images/Vector_2.png" alt="">
+            </div>
+
+            <a class="header_login" href="/sign-in">Login</a>
+        </div>
+    </header>
+    <!--FIM DO HEADER-->
+
+
+    <!--INICIO HOME -->
+    <home class="home">
+        <!--INICIO HOME 1 (PARTE QUE TEM A IMAGEM)-->
+        <section>
+            <div class="home">
+            </div class="img-home">
+            <img src="../../public/images/home.png" alt="" width="100%">
+            <div class="home_text">
+                <h1 class="home_text_title">Saberia agir em caso de desaparecimento?</h1>
+                <h3 class="home_text_caption">Acesse a Cartilha contida neste site para saber
+                    como prevenir e <br> como agir em situações como essas que
+                    atinge anualmente 20 mil <br> famílias na cidade de São Paulo.</h3>
+                <div class="home_button">
+                    <a class="button-reg" href="/missing-register">Registrar uma pessoa desaparecida</a>
+                    <img class="home_vector" src="../../public/images/Vector_white.png" alt="">
+                </div>
+            </div>
+            </div>
+        </section>
+        <!--FIM HOME 1 (PARTE QUE TEM A IMAGEM)-->
+    </home>
+    <!--FIM HOME -->
+
+    <!--INICIO DO CARROSEL-->
+    <section>
+        <div class="home_two">
+            <div class="home_two_text">
+                <h1 class="home_two_text_title">Você já viu <br>alguém?</h1>
+                <a class="home_two_text_caption" href="/search-person">Clique para ver mais</a>
+            </div>
+
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <% lastSix.forEach(person => {%>
+                        <div class="swiper-slide">
+                            <a class="card-slide" href="<%= `/missing-person/${person.id}`  %> ">
+                                <img class="slide-img1" src="<%= `http://localhost:3000/uploads/${person.profilePhoto}` %>" alt="<%= person.missingPersonName %>">
+                                <div class="person-name">
+                                    <p><%= person.missingPersonName %></p>
+                                </div>
+                            </a>
+                        </div>
+                    <%})%>
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
+            </div>
+    </section>
+    <!--FIM DO CARROSEL-->
+
+    <!--INCIO DO FOOTER-->
+    <footer class="footer-cartilha">
+        <div class="footer">
+            <h1 class="footer-title">Cartilha de enfrentamento</h1>
+            <h3 class="footer-subtitle">Para acessar na íntegra dicas de segurança, passo a <br>
+                passo relacionado à um desaparecimento, contato <br>
+                com autoridades e mais, clique no botão abaixo.</h3>
+            <div class="footer-link">
+                <a href="../../public/images/EnfrentamentoDesaparecimento.pdf">Ver Cartilha</a>
+                <img class="header_vector" src="../../public/images/Vector_2.png" alt="">
+            </div>
+
+
+        </div>
+        <div class="footer-img">
+            <img src="../../public/images/cartilha.png" alt="Cartilha">
+        </div>
+
+
+
+    </footer>
+    <!--FIM DO FOOTER-->
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            slidesPerView: 3,
+            spaceBetween: 30,
+            slidesPerGroup: 3,
+            loop: true,
+            loopFillGroupWithBlank: true,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+
+
+        });
+    </script>
+
+</body>
+
+</html>

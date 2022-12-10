@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Página do Desaparecido</title>
+    <link rel="stylesheet" href="../../public/styles/missing-person.css" />
+    <link
+      rel="stylesheet"
+      href="../../public/styles/missing-person-responsive.css"
+    />
+  </head>
+
+  <body>
+    <div class="container">
+      <header class="web-header">
+        <div>
+          <a href="/">
+            <img
+              src="../../public/images/logo.png"
+              alt="Desaparecidos"
+              class="logo"
+              style="cursor: pointer"
+            />
+          </a>
+          <div>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke=" #2AB514"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="feather feather-user-check"
+            >
+              <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+              <circle cx="8.5" cy="7" r="4"></circle>
+              <polyline points="17 11 19 13 23 9"></polyline>
+            </svg>
+            <p class="username" style="margin-bottom: 2rem">Nome do usuário</p>
+          </div>
+        </div>
+
+        <div class="help">
+          <div class="helping-find">
+            <a href="/search-person">
+              <h3>Ajude-nos a encontrar ></h3>
+            </a>
+          </div>
+          <div>
+            <input type="submit" value="Login" class="login-button" />
+          </div>
+        </div>
+      </header>
+
+      <section class="box">
+        <aside class="left">
+          <div class="missing-person-name">
+            <h1><%= person.missingPersonName %> </h1>
+          </div>
+          <div class="missing-since">
+            <p>Desaparecido desde <%= person.createdAt.substring(0, 10) %></p>
+          </div>
+          <div class="primary-infos">
+            <div>
+              <img
+                class="picture"
+                src="<%= `http://localhost:3000/uploads/${person.profilePhoto}` %>"
+                alt="Imagem do desaparecido"
+              />
+            </div>
+            <div class="info">
+              <div>
+                <h4>Aniversário:</h4>
+                <label for="age" id="infoAnswer"><%= person.birthDate %></label>
+              </div>
+
+              <div>
+                <h4>Peso:</h4>
+                <label for="weight" id="infoAnswer"> <%= person.weight %></label>
+              </div>
+
+              <div>
+                <h4>Altura:</h4>
+                <label for="height" id="infoAnswer"> <%= person.height %></label>
+              </div>
+
+              <div>
+                <h4>Cor dos olhos:</h4>
+                <label for="eye-color" id="infoAnswer"> <%= person.eyeColor %></label>
+              </div>
+
+              <div>
+                <h4>Tipo de cabelo:</h4>
+                <label for="hair-type" id="infoAnswer"> <%= person.hairType %></label>
+              </div>
+
+              <div>
+                <h4>Cor do cabelo:</h4>
+                <label for="hair-color" id="infoAnswer"> <%= person.hairColor %></label>
+              </div>
+
+              <div>
+                <h4>Etnia:</h4>
+                <label for="breed" id="infoAnswer"> <%= person.skinColor %></label>
+              </div>
+
+              <div>
+                <h4>Endereço:</h4>
+                <label for="state" id="infoAnswer"> <%= person.address %></label>
+              </div>
+            </div>
+          </div>
+          <div class="secundary-infos">
+            <div>
+              <h4>Roupa que usava no dia do desaparecimento:</h4>
+              <label for="clothes" id="infoAnswer">
+                <%= person.clothing %></label>
+            </div>
+
+            <nav>
+              <h4>Doenças?</h4>
+              <label for="illness" id="infoAnswer"> <%= person.illnesses %></label>
+            </nav>
+
+            <nav>
+              <h4>Tatuagens?</h4>
+              <label for="tattoos" id="infoAnswer"> <%= person.tattoos %></label>
+            </nav>
+
+            <div>
+              <h4>Observações:</h4>
+              <label for="comments" id="infoAnswer">
+                <%= person.comments %>
+              </label>
+            </div>
+          </div>
+        </aside>
+
+        <aside class="right">
+          <h2>
+            SEGUINDO AS INDICAÇÕES DA POLÍCIA CIVIL, NÃO DIVULGAMOS NOMES OU
+            DADOS PESSOAIS DOS FAMILIARES. PARA PASSAR INFORMAÇÕES SOBRE
+            QUALQUER PESSOA, VOCÊ PODE LIGAR 190 OU 181 PARA UM REPORTE ANÔNIMO.
+          </h2>
+
+          <button class="fale-conosco">
+            <a href="mailto:mailto=contato@desaparecidos.com">
+              <p>
+                Fale Conosco
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="30"
+                  height="24"
+                  viewBox="0 0 24 18"
+                  fill="none"
+                  stroke="#023859"
+                  stroke-width="3"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="feather feather-chevron-right"
+                >
+                  <polyline points="9 18 15 12 9 6"></polyline>
+                </svg>
+              </p>
+            </a>
+          </button>
+        </aside>
+      </section>
+    </div>
+  </body>
+</html>

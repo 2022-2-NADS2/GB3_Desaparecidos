@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Procure um desaparecido</title>
+    <link rel="stylesheet" type="text/css" href="../../public/styles/search-person.css">
+</head>
+
+<body>
+
+<!--INICIO DO HEADER-->
+
+    <header class="header">
+        <div class="header-logo-go-out">
+            <a href="/">
+                <img src="../../public/images/logo.png" alt="Desaparecidos" class="logo" style="cursor: pointer" />
+            </a>
+            <div class="button-go-out">
+                <a class="header_go-out">Sair</a>
+            </div>
+        </div>
+        <div class="user">
+            <img src="../../public/images/user.png" alt="User">
+            <a class="header-user-name">Raquel Anicio dos Santos</a>
+        </div>
+    </header>
+
+<!--FIM DO HEADER-->    
+
+<!--INICIO DO HOME-->  
+
+        <home class="home-td">
+
+            <!-- HOME (INICIO - IMAGEM INICIAL)-->  
+            <section>
+            <div class="home">
+            </div class="img-home">
+            <img src="../../public/images/home-two.png" alt="" width="100%">
+            <div class="box-text">
+                <p class="box-text-black">Pesquise as pessoas <br> desaparecidas no momento</p>
+            </div>
+            </section>
+            <!-- HOME (FIM - IMAGEM INICIAL)-->  
+
+              
+
+            <!--INICIO DOS DO CONTAINER COM OS FILTROS-->
+            <div class="container-group">
+                
+            </div>
+            <!--FIM DO CONTAINER COM OS FILTROS-->
+
+        </home>
+
+<!--FIM DO HOME-->
+
+<!--INICIO DO MURAL DE PESSOAS DESAPARECIDAS-->
+
+    <section>
+        <main>
+            <div class="container-missing">
+                <div class="title-filter">
+                    <p>Mostrando Desaparecidos:</p>
+                </div>
+
+                <div class="box-missing">
+                    <div class="person-missing">
+                        <% peopleData.forEach(person => {%>
+                            <a class="person1" href="<%= `/missing-person/${person.id}` %> ">
+                                <div class="box-person">
+                                    <img class="slide1-img" src=<%= person.profilePhoto.length > 1 ? `http://localhost:3000/uploads/${person.profilePhoto}` : '../../public/images/missing.png' %> alt="<%= person.missingPersonName %> ">
+                                    <p class="person1-person-name"><%= person.missingPersonName %></p>
+                                </div>
+                            </a>    
+                        <%})%>
+                
+                    </div>
+                </div>
+            </div>
+
+        </main>
+
+    </section>
+
+<!--FIM DO MURAL DE PESSOAS DESAPARECIDAS-->
+
+</body>
+
+</html>

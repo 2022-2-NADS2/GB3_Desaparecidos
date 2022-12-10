@@ -1,0 +1,113 @@
+@media(min-width: 1920px)
+{
+    .container{
+        zoom: 1.25;
+    }
+}
+
+@media(max-width: 1440px)
+{
+    .container{
+        zoom: 1;
+    }
+
+    .right{
+        width: 30%;
+    }
+}
+
+@media(max-width: 1280px)
+{
+    .right{
+        width: 50%;
+    }
+}
+
+@media(max-width: 912px)
+{
+    .web-header {
+        display: inline;
+    }
+
+    .help{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .box{
+        border: none;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .left{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    div .missing-person-name, div .missing-since{
+        margin-left: 0%;
+    }
+
+    .right{
+        width: 500px;
+        margin-top: 50px;
+    }
+
+    .fale-conosco{
+        margin-top: 130px;
+    }
+    
+}
+
+@media(max-width: 600px)
+{
+    .box{
+        padding: 0;
+        margin: 0;
+    }
+
+    .help{
+        display: flex;
+    }
+
+    .picture{
+        width: 80%;
+        height: 30vh;
+    }
+    
+    .info{
+        padding: 0;
+    }
+
+    .info div{
+        font-size: 12px;
+        gap: 1px;
+    }
+
+    .secundary-infos nav, .secundary-infos div{
+        font-size: 14px;
+    }
+    
+
+    .logo{
+        width: 70%;
+    }
+
+    .right{
+        width: 300px;
+        margin-top: 20px;
+    }
+
+    h2{
+        height: 280px;
+        width: 300px;
+    }
+
+    .login-button{
+        width: 100px;
+    }
+}

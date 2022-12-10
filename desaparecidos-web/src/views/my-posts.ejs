@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minhas postagens</title>
+    <link rel="stylesheet" href="styles/my-posts.css">
+</head> 
+
+<body>
+    <header class="web-header">
+
+        <div>
+            <img src="images/logo.png" alt="logotipo" width="350px" height="40px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke=" #2AB514" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="feather feather-user-check">
+                    <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                    <circle cx="8.5" cy="7" r="4"></circle>
+                    <polyline points="17 11 19 13 23 9"></polyline>
+                </svg>
+                <p class="username">Nome do usuário</p>
+            </div>
+        </div>
+
+        <div>
+            <button class="exit-button">Login</button>
+        </div>
+
+    </header>
+
+    <nav>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#023859"
+            stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-left">
+            <polyline points="15 18 9 12 15 6"></polyline>
+        </svg>
+        <p class="return">Voltar ao início</p>
+    </nav>
+
+    <section class="box">
+
+        <div class="my-posts">
+            <h1>MINHAS POSTAGENS</h1>
+        </div>
+
+        <div class="add">
+            <button class="add-missing">
+                <p class="left">Adicionar desaparecido</p>
+                <p class="plus">+</p>
+            </button>
+        </div>
+        
+        <div class="individual-file">
+            <div>
+                <img src="images/desaparecido.png" alt="Imagem desaparecido" width="209px" height="200px">
+
+                <h2>Fulano da Silva</h2>
+
+                <a href="/">Visualizar</a>
+
+            </div>
+
+            <div> 
+                <button class="edit-button">Editar</button>
+                <button class="delete-button">Deletar</button>
+            </div>
+
+        </div>
+
+    </section>
+
+</body>
+
+</html>

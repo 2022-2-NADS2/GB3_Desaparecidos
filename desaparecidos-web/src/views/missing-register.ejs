@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desaparecidos</title>
+
+    <link rel="stylesheet" href="../../public/styles/missing-register.css">
+    <link rel="stylesheet" href="../../public/styles/global.css">
+    <link rel="stylesheet" href="../../public/styles/missing-register-responsive.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div>
+                <a href="/">
+                    <img src="../../public/images/logo.png" alt="Desaparecidos" class="logo" style="cursor: pointer" />
+                </a>
+                <div class="face">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke=" #2AB514" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="feather feather-user-check">
+                        <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                        <circle cx="8.5" cy="7" r="4"></circle>
+                        <polyline points="17 11 19 13 23 9"></polyline>
+                    </svg>
+
+                    <h4>Nome da Pessoa</h4>
+                </div>
+            </div>
+            <br>
+            <div class="help">
+                <div class="helping-find">
+                    <a href="/search-person">
+                        <h3>
+                            <strong>Ajude-nos a encontrar</strong>
+                            <img class="vector" src="../../public/images/Vector.svg" alt="seta para esquerda" />
+                        </h3>
+                    </a>
+                </div>
+                <button href="/" type="button" onclick="logoutUser()" class="logout-button"> Sair</button>
+            </div>
+        </header>
+
+        <section class="content">
+            <form id="formRegister" name="formRegister" method="post" onsubmit="submitForm(event)">
+                <h2>Registrar um desaparecido</h2>
+                <div>
+                    <div class="inputs-container">
+                        <div class="left">
+                            <p>
+                                <label for="missingPersonName">Nome:</label>
+                                <input type="text" id="missingPersonName" name="missingPersonName">
+                            </p>
+                            <p>
+                                <label for="birthDate">Nascimento: </label>
+                                <input type="date" id="birthDate" name="birthDate">
+                            </p>
+    
+                            <p>
+                                <label for="weight">Peso: </label>
+                                <input type="text" id="weight" name="weight">
+                            </p>
+    
+                            <p>
+                                <label for="height">Altura: </label>
+                                <input type="text" id="height" name="height">
+                            </p>
+    
+    
+                            <p>
+                                <label for="illnesses">Doenças: </label>
+                                <input type="text" id="illnesses" name="illnesses">
+                            </p>
+    
+                            <p>
+                                <label for="tattoos">Tatuagens: </label>
+                                <input type="text" id="tattoos" name="tattoos">
+                            </p>
+    
+                            <p>
+                                <label for="sex">Sexo: </label>
+                                <select id="sex" name="sex">
+                                    <option selected="" value="">None</option>
+                                    <option value="Masculino">Masculino</option>
+                                    <option value="Feminino">Feminino</option>
+                                </select>
+                            </p>
+    
+                            <p>
+                                <label for="contacts">Telefone para contato: </label>
+                                <input type="text" id="contacts" name="contacts">
+                            </p>
+    
+                        </div>
+                        <div class="right">
+                            <p>
+                                <label for="policeReport">Boletim de ocorrência: </label>
+                                <input type="text" id="policeReport" name="policeReport">
+                            </p>
+    
+                            <p>
+                                <label for="eyeColor">Cor dos olhos: </label>
+                                <input type="text" id="eyeColor" name="eyeColor">
+                            </p>
+    
+                            <p>
+                                <label for="hairType">Tipo de Cabelo: </label>
+                                <input type="text" id="hairType" name="hairType">
+                            </p>
+    
+                            <p>
+                                <label for="hairColor">Cor do Cabelo: </label>
+                                <input type="text" id="hairColor" name="hairColor">
+                            </p>
+    
+                            <p>
+                                <label for="skinColor">Cor da pele: </label>
+                                <input type="text" id="skinColor" name="skinColor">
+                            </p>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="region">
+                    <p>
+                        <label for="address">Endereço </label>
+                        <input type="text" id="address" name="address">
+                    </p>
+                       
+                      
+                    </div>
+                   
+                </div>
+                <div class="archives">
+                    <p>Imagem Principal</p>
+                    <br>
+                    <label for="profile">Escolher</label>
+                    <input type="file" id="profile" name="profile">
+                </div>
+                <div class="clothing">
+                    <label for="clothing">Roupas do dia do<br>desaparecimento: </label>
+                    <input type="text" id="clothing" name="clothing">
+                </div>
+                <div class="comments">
+                    <label for="comments">Observações: </label>
+                    <input type="text" id="comments" name="comments">
+                </div>
+                <div class="context">
+                    <label for="context">Context: </label>
+                    <input type="text" id="context" name="context">
+                </div>
+                <div class="button">
+                    <button type="submit">Registrar</button>
+            </form>
+            </div>
+        </section>
+    </div>
+
+    <script src="../../public/scripts/main.js"></script>
+</body>
+
+</html>

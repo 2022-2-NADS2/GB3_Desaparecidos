@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Desaparecidos</title>
+
+  <link rel="stylesheet" href="../../public/styles/sign-up.css">
+  <link rel="stylesheet" href="../../public/styles/sign-up-responsive.css">
+  <link rel="stylesheet" href="../../public/styles/global.css">
+</head>
+
+<body>
+  <div class="container">
+    <header>
+      <a href="/">
+        <img src="../../public/images/logo.png" alt="Desaparecidos" class="logo" style="cursor: pointer" />
+    </a>
+
+      <div class="help">
+        <div class="helping-find">
+          <a href="#">
+            <h3>
+              <a href="/search-person">Ajude-nos a encontrar </a>
+              <img class="vector" src="../../public/images/Vector.svg" alt="seta para esquerda" />
+            </h3>
+          </a>
+        </div>
+    </header>
+    <main>
+      <div class="formLogin">
+        <div class="loginTitle">
+          <p>Registrar conta</p>
+        </div>
+
+        <form id="formRegister" name="formRegister" method="post">
+          <div class="inputContainer">
+            <label for="username">Nome</label>
+            <input id="username" name="username" type="text" required />
+          </div>
+
+          <div class="inputContainer">
+            <label for="email">E-mail</label>
+            <input id="email" name="email" type="text" required />
+          </div>
+
+          <div class="inputContainer">
+            <label for="password">Senha</label>
+            <input id="password" name="password" type="text" required />
+          </div>
+
+          <div class="inputContainer">
+            <label for="phone">Celular</label>
+            <input id="phone" name="phone" type="text" required />
+          </div>
+          <button type="submit">Criar conta</button>
+        </form>
+        <a href="/sign-in" style="color: white;">ou faça login</a>
+      </div>
+    </main>
+  </div>
+</body>
+
+</html>
